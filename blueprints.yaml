@@ -30,6 +30,11 @@ form:
       label: PLUGIN_SMART_BANNER.APP_ID
       help: PLUGIN_SMART_BANNER.APP_ID_HELP
       placeholder: PLUGIN_SMART_BANNER.APP_ID_HINT
+    appID_image:
+      type: display
+      size: large
+      markdown: true
+      content: PLUGIN_SMART_BANNER.APP_ID_DISPLAY
     affiliateToken:
       type: text
       label: PLUGIN_SMART_BANNER.AFFILIATE_TOKEN
@@ -40,3 +45,9 @@ form:
       label: PLUGIN_SMART_BANNER.DEEPLINK
       help: PLUGIN_SMART_BANNER.DEEPLINK_HELP
       placeholder: PLUGIN_SMART_BANNER.DEEPLINK_HINT
+    moreInfo:
+      type: display
+      size: large
+      label: PLUGIN_SMART_BANNER.MOREINFO
+      markdown: true
+      content: PLUGIN_SMART_BANNER.MOREINFO_CONTENT
