@@ -1,0 +1,11 @@
+en:
+  PLUGIN_SMART_BANNER:
+    APP_ID: "App ID"
+    APP_ID_HELP: "This is the ID assigned by Apple to your app. You can find it in your apps pages on iTunes Connect."
+    APP_ID_HINT: "0123456789"
+    AFFILIATE_TOKEN: "Affliate Token"
+    AFFILIATE_TOKEN_HINT: '0000a'
+    AFFILIATE_TOKEN_HELP: "This is an entirely optional field. If you are a member of Apple's iTunes Affliate program you can add your Affliate Token here."
+    DEEPLINK: "App Arguments"
+    DEEPLINK_HELP: "App Arguments can be anything your app is setup to handle"
+    DEEPLINK_HINT: "/search?terms=new%20document"
