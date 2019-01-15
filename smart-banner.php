@@ -1,6 +1,7 @@
 <?php
 namespace Grav\Plugin;
 
+use Grav\Common\Page\Page;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 
@@ -39,7 +40,7 @@ class SmartBannerPlugin extends Plugin
 
         // Enable the main event we are interested in
         $this->enable([
-            'onPageContentRaw' => ['onPageContentRaw', 0]
+            'onPageInitialized' => ['onPageInitialized', 0]
         ]);
     }
 
@@ -49,7 +50,42 @@ class SmartBannerPlugin extends Plugin
      *
      * @param Event $e
      */
-    public function onPageContentRaw(Event $e)
+    public function onPageInitialized(Event $e)
     {
+        /** Check if 'apple-itunes-app' tag is already set */
+        $mtName = "apple-itunes-app";
+
+        /** @var Page $page */
+        $page = $e['page'];
+        $meta = $page->metadata();
+
+        /** Early return the tag is already set */
+        if (isset($meta[$mtName])) {
+            return;
+        }
+
+        /** Get the appID */
+        $appID = trim($this->grav['config']->get('plugins.smart-banner.appID'));
+
+
+        /** Early return if we don't at least have an appID */
+        if (empty($appID)) {
+            return;
+        }
+
+        /** Get the 'optional' affliate token */
+        $token = trim($this->grav['config']->get('plugins.smart-banner.affiliateToken'));
+        $affiliateDataString = empty($token) ? '' : ", affiliate-date=$token";
+
+        /**Get the 'optional' app arguments */
+        $deeplink = urlencode(trim($this->grav['config']->get('plugins.smart-banner.deeplink')));
+        $argsString = empty($deeplink) ? '' : ", app-argument=$deeplink";
+
+        /** Assemble the tag content attribute */
+        $mtContent = "app-id=$appID$affiliateDataString$argsString";
+
+        $meta[$mtName] = ['name' => $mtName, 'content' => $mtContent];
+
+        $page->metadata($meta);
     }
 }
