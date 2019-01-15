@@ -2,13 +2,13 @@ en:
   PLUGIN_SMART_BANNER:
     APP_ID: "App ID"
     APP_ID_HELP: "This is the ID assigned by Apple to your app. You can find it in your apps pages on iTunes Connect. For Smart Banners to work this is the only required field, without it the plugin will not add anything to your website."
-    APP_ID_DISPLAY: "An example of how your App ID will appear in [iTunes Connect](https://itunesconnect.apple.com/?target=_blank).\n![iTunes Showing App ID](user://plugins/smart-banner/assets/iTunes_Connect_AppID_2x.png?cropResize=200,200)"
+    APP_ID_DISPLAY: "An example of how your App ID will appear on the app's page in [your iTunes Connect account](https://itunesconnect.apple.com/?target=_blank).\n![iTunes Showing App ID](user://plugins/smart-banner/assets/iTunes_Connect_AppID_2x.png?cropResize=200,200)"
     APP_ID_HINT: "0123456789"
     AFFILIATE_TOKEN: "Affliate Token"
     AFFILIATE_TOKEN_HINT: '0000a'
     AFFILIATE_TOKEN_HELP: "This is an entirely optional field. If you are a member of Apple's iTunes Affliate program you can add your Affliate Token here."
     DEEPLINK: "App Arguments"
-    DEEPLINK_HELP: "App Arguments can be anything your app is setup to handle"
-    DEEPLINK_HINT: "/search?terms=new%20document"
+    DEEPLINK_HELP: "This is an entirely optional field. App Arguments contains a URL that provides context to your app."
+    DEEPLINK_HINT: "e.g. '/search?terms=new%20document' or 'http://somedomain.com?utm=clickSource'"
     MOREINFO: "More Info"
-    MOREINFO_CONTENT: "Smart Banners are shown on iOS devices that visit your website, an will have an appearance similar to this one for one of our apps Sunrise Times.\n![Sunrise Times Smart Banner](user://plugins/smart-banner/assets/sunrisetimes_banner.png)\nOr the Apple example for the Apple Store app: \n![Example Smart Banner](user://plugins/smart-banner/assets/smartbanner_2x.png)\nYou can read more in the [Apple Documentation on Smart Banners](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html?target=_blank)"
+    MOREINFO_CONTENT: "Smart Banners are shown on iOS devices that visit your website.\n\n**Not Installed**\n\nIf the app isn't installed on the users iOS device they will have an appearance similar to this one for one of our apps Sunrise Times.\n[![Sunrise Times Smart Banner](user://plugins/smart-banner/assets/sunrisetimes_banner.png)](https://sunrisetime.app?utm=Smart_Banner_Plugin)\n\nOr the Apple example for the Apple Store app: \n![Example Smart Banner](user://plugins/smart-banner/assets/smartbanner_2x.png)\nYou can read more in the [Apple Documentation on Smart Banners](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html?target=_blank)\n\n**Installed Appearance**\n\nIf the app is already installed on the iOS device the banner will have a different appearance, prompting the user to open the app on their device:\n\n[![Sunrise Times Smart Banner](user://plugins/smart-banner/assets/sunrisetimes_banner_installed.png)](https://sunrisetime.app?utm=Smart_Banner_Plugin_installed)"

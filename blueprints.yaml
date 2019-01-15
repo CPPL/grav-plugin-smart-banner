@@ -1,7 +1,7 @@
 name: Smart Banner
 version: 0.1.0
 description: A quick and simple way to add Apple's Smart Banners for iOS apps to your Grav website.
-icon: plug
+icon: adn
 author:
   name: Craig Phillips
   email: support@craigphillips.biz
@@ -29,6 +29,7 @@ form:
       type: text
       label: PLUGIN_SMART_BANNER.APP_ID
       help: PLUGIN_SMART_BANNER.APP_ID_HELP
+      default: ""
       placeholder: PLUGIN_SMART_BANNER.APP_ID_HINT
     appID_image:
       type: display
