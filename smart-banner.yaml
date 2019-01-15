@@ -1,2 +1,4 @@
 enabled: true
-text_var: Custom Text added by the **Smart Banner** plugin (disable plugin to remove)
+appID: '0123456789'
+affiliateToken: 0000aa
+deeplink: 'http://somedomain.com?utm=clickSource'
